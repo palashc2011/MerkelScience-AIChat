@@ -1,4 +1,4 @@
-# ms-chat
+# MerkelScience-AI-Chat
 
 A React + Vite project with TypeScript, TailwindCSS, and TinyMCE integration.
 
