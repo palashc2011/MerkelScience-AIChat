@@ -1,61 +1,113 @@
-# React + TypeScript + Vite
+# ms-chat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite project with TypeScript, TailwindCSS, and TinyMCE integration.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Getting Started
 
-## Expanding the ESLint configuration
+### 1. Prerequisites
+Make sure you have the following installed:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [Node.js](https://nodejs.org/) (>=18.x recommended)
+- [npm](https://www.npmjs.com/) (comes with Node) or [yarn](https://yarnpkg.com/) / [pnpm](https://pnpm.io/)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      ...tseslint.configs.recommendedTypeChecked,
-      ...tseslint.configs.strictTypeChecked,
-      ...tseslint.configs.stylisticTypeChecked,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-  },
-])
+Check versions:
+
+```bash
+node -v
+npm -v
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 2. Clone the Repository
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone <your-repo-url>
+cd ms-chat
 ```
+
+---
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+(or use `yarn install` / `pnpm install` if you prefer)
+
+---
+
+### 4. Run in Development
+
+```bash
+npm run dev
+```
+
+This will start the Vite development server.  
+By default, your app will be available at:  
+👉 [http://localhost:5173](http://localhost:5173)
+
+---
+
+### 5. Build for Production
+
+```bash
+npm run build
+```
+
+This will:
+
+- Run TypeScript compiler (`tsc -b`)
+- Create an optimized production build inside the `dist/` folder.
+
+---
+
+### 6. Preview Production Build (Locally)
+
+```bash
+npm run preview
+```
+
+This serves the `dist/` folder locally so you can test the production build.
+
+---
+
+### 7. Linting
+
+```bash
+npm run lint
+```
+
+Runs ESLint checks to maintain code quality.
+
+---
+
+## 📦 Tech Stack
+
+- **React 19** with **Vite**
+- **TypeScript**
+- **TailwindCSS 4**
+- **TinyMCE** rich text editor (`tinymce`, `@tinymce/tinymce-react`)
+- **styled-components**
+- **react-markdown** with `remark-gfm` & `rehype-highlight`
+- **OpenAI API** integration
+- ESLint + TypeScript ESLint for linting
+
+---
+
+## 🌐 Deployment
+
+### Deploy to [Netlify](https://www.netlify.com/)
+
+1. Run `npm run build`
+2. Deploy the contents of the `dist/` folder.
+   - Either drag & drop `dist/` in Netlify dashboard.
+   - Or connect your repo to Netlify and set:
+     - **Build Command**: `npm run build`
+     - **Publish Directory**: `dist`
+
+---
+
