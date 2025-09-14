@@ -1,0 +1,21 @@
+.tox.tox-tinymce {
+    border: none !important;
+    box-shadow: none !important; /* optional, removes shadow too */
+    border-radius: 0px !important;
+}
+
+.tox.tox-tinymce.tox-edit-focus .tox-edit-area::before {
+    content: none !important;
+}
+
+.tox-tbtn {
+    margin: 0px 1px 0px 0px !important;
+}
+
+.tox-editor-header {
+    padding: 6px 0;
+}
+
+.tox-sidebar-wrap {
+    /* max-height: 92px; */
+}
